@@ -29,11 +29,12 @@ export default function Information(props) {
                     break;
                 case 'update':
                     setTranslation(e.data.output)
-                    console.log(e.data.output)
+                    console.log('Translation update:', e.data.output)
                     break;
                 case 'complete':
+                    setTranslation(e.data.output)
                     setTranslating(false)
-                    console.log("DONE")
+                    console.log("Translation complete:", e.data.output)
                     break;
             }
         }
